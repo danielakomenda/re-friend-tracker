@@ -237,28 +237,28 @@ export class GuiModel {
                             "type": "button",
                             "name": "Friends",
                             "icon": "fa-user",
-                            "color": "blue",
+                            "color": "orange",
                             "page": "friendspage",
                         },
                         {
                             "type": "button",
                             "name": "Location",
                             "icon": "fa-regular fa-map",
-                            "color": "yellow",
+                            "color": "green",
                             "page": "locationspage",
                         },
                         {
                             "type": "button",
                             "name": "Groups",
                             "icon": "fa-weixin",
-                            "color": "wisteria",
+                            "color": "blue",
                             "page": "groupspage",
                         },
                         {
                             "type": "button",
                             "name": "Activity",
                             "icon": "fa-light fa-icons",
-                            "color": "green",
+                            "color": "wisteria",
                             "page": "activitypage",
                         }
                     ]
@@ -273,7 +273,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": "NewFriend",
                             "icon": "fa-user",
-                            "color": "green",
+                            "color": "orange",
                             "form": {
                                 "form": "FriendForm"
                             }
@@ -281,7 +281,7 @@ export class GuiModel {
                         {
                             "type": "list",
                             "icon": "fa-user",
-                            "color": "blue",
+                            "color": "yellow",
                             "search": true,
                             "url": "/friend",
                             "page": "overviewFriend"
@@ -297,7 +297,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "NewLocation",
-                            "icon": "fa-home",
+                            "icon": "fa-regular fa-map",
                             "color": "green",
                             "width": 2,
                             "form": {
@@ -306,8 +306,8 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "fa-home",
-                            "color": "blue",
+                            "icon": "fa-regular fa-map",
+                            "color": "emerald",
                             "search": true,
                             "url": "/location",
                             "page": "overviewLocation"
@@ -324,7 +324,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": "NewGroup",
                             "icon": "fa-weixin",
-                            "color": "green",
+                            "color": "blue",
                             "form": {
                                 "form": "GroupForm"
                             }
@@ -332,7 +332,7 @@ export class GuiModel {
                         {
                             "type": "list",
                             "icon": "fa-weixin",
-                            "color": "wisteria",
+                            "color": "turquoise",
                             "search": true,
                             "url": "/group",
                             "form": {
@@ -351,7 +351,7 @@ export class GuiModel {
                             "type": "newButton",
                             "name": "NewActivity",
                             "icon": "fa-regular fa-futbol",
-                            "color": "green",
+                            "color": "wisteria",
                             "width": 2,
                             "form": {
                                 "form": "ActivityForm"
@@ -359,8 +359,8 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "fa-weixin",
-                            "color": "wisteria",
+                            "icon": "fa-regular fa-futbol",
+                            "color": "pink",
                             "search": true,
                             "url": "/activity",
                             "page": "overviewActivity"
@@ -376,8 +376,8 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "EditFriend",
-                            "icon": "fa-weixin",
-                            "color": "green",
+                            "icon": "fa-user",
+                            "color": "orange",
                             "form": {
                                 "form": "FriendForm"
                             }
@@ -385,8 +385,8 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "AddActivity",
-                            "icon": "fa-weixin",
-                            "color": "green",
+                            "icon": "fa-futbol",
+                            "color": "wisteria",
                             "form": {
                                 "form": "AddActivityForm"
                             }
@@ -394,7 +394,7 @@ export class GuiModel {
                         {
                             "type": "list",
                             "icon": "fa-weixin",
-                            "color": "wisteria",
+                            "color": "pink",
                             "search": true,
                             "url": "/friend/:friendKey/activity",
                         }
@@ -418,7 +418,7 @@ export class GuiModel {
                         {
                             "type": "list",
                             "icon": "fa-weixin",
-                            "color": "wisteria",
+                            "color": "pink",
                             "search": true,
                             "url": "/location/:locationKey/activity",
                         }
@@ -434,7 +434,7 @@ export class GuiModel {
                             "type": "button",
                             "name": "EditActivity",
                             "icon": "fa-weixin",
-                            "color": "green",
+                            "color": "wisteria",
                             "form": {
                                 "form": "ActivityForm"
                             }
@@ -442,7 +442,7 @@ export class GuiModel {
                         {
                             "type": "list",
                             "icon": "fa-weixin",
-                            "color": "wisteria",
+                            "color": "yellow",
                             "search": true,
                             "url": "/activity/:activityKey/friend",
                         }
