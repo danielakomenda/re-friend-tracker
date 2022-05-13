@@ -9,6 +9,239 @@ export class GuiModel {
     private _guiModel = {
         "application": {
             "title": "Daniela's Friend Tracker",
+            
+            "pageList": [
+                {
+                    "id": "mainmenu",
+                    "name": "MainMenu",
+                    "elementList": [
+                        {
+                            "type": "button",
+                            "name": "Friends",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "page": "friendspage",
+                        },
+                        {
+                            "type": "button",
+                            "name": "Location",
+                            "icon": "fa-regular fa-map",
+                            "color": "green",
+                            "page": "locationspage",
+                        },
+                        {
+                            "type": "button",
+                            "name": "Groups",
+                            "icon": "fa-weixin",
+                            "color": "blue",
+                            "page": "groupspage",
+                        },
+                        {
+                            "type": "button",
+                            "name": "Activity",
+                            "icon": "fa-light fa-icons",
+                            "color": "wisteria",
+                            "page": "activitypage",
+                        }
+                    ]
+                },
+                {
+                    "id": "friendspage",
+                    "elementList": [
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "yellow",
+                            "search": true,
+                            "url": "/friend",
+                            "page": "overviewFriend"
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewFriend",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "width": 1,
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        },
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                },
+                {
+                    "id": "locationspage",
+                    "elementList": [
+                        {
+                            "type": "list",
+                            "icon": "fa-regular fa-map",
+                            "color": "emerald",
+                            "search": true,
+                            "url": "/location",
+                            "page": "overviewLocation"
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewLocation",
+                            "icon": "fa-regular fa-map",
+                            "color": "green",
+                            "width": 1,
+                            "form": {
+                                "form": "LocationForm"
+                            }
+                        },
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                },
+                {
+                    "id": "groupspage",
+                    "elementList": [
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "turquoise",
+                            "search": true,
+                            "url": "/group",
+                            "form": {
+                                "form": "GroupForm"
+                            }
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewGroup",
+                            "icon": "fa-weixin",
+                            "color": "blue",
+                            "width": 1,
+                            "form": {
+                                "form": "GroupForm"
+                            }
+                        },
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                },
+                {
+                    "id": "activitypage",
+                    "elementList": [
+                        {
+                            "type": "list",
+                            "icon": "fa-regular fa-futbol",
+                            "color": "pink",
+                            "search": true,
+                            "url": "/activity",
+                            "page": "overviewActivity"
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "fa-regular fa-futbol",
+                            "color": "wisteria",
+                            "width": 1,
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                },
+                {
+                    "id": "overviewFriend",
+                    "elementList": [
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "pink",
+                            "search": true,
+                            "url": "/friend/:friendKey/activity",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "fa-futbol",
+                            "color": "wisteria",
+                            "width": 2,
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditFriend",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "width": 1,
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        },
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                },
+                {
+                    "id": "overviewLocation",
+                    "elementList": [
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "pink",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-weixin",
+                            "color": "green",
+                            "width": 2,
+                            "form": {
+                                "form": "LocationForm"
+                            }
+                        },
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                },
+                {
+                    "id": "overviewActivity",
+                    "elementList": [
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "yellow",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditActivity",
+                            "icon": "fa-weixin",
+                            "color": "wisteria",
+                            "width": 2,
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "backbutton",
+                        },
+                    ]
+                },
+            ],
+
+
+
+
+            
             "formList": [
                 {
                     "id": "FriendForm",
@@ -228,232 +461,6 @@ export class GuiModel {
                     ]
                 },
             ],
-
-
-            "pageList": [
-                {
-                    "id": "mainmenu",
-                    "name": "MainMenu",
-                    "elementList": [
-                        {
-                            "type": "button",
-                            "name": "Friends",
-                            "icon": "fa-user",
-                            "color": "orange",
-                            "page": "friendspage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Location",
-                            "icon": "fa-regular fa-map",
-                            "color": "green",
-                            "page": "locationspage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Groups",
-                            "icon": "fa-weixin",
-                            "color": "blue",
-                            "page": "groupspage",
-                        },
-                        {
-                            "type": "button",
-                            "name": "Activity",
-                            "icon": "fa-light fa-icons",
-                            "color": "wisteria",
-                            "page": "activitypage",
-                        }
-                    ]
-                },
-                {
-                    "id": "friendspage",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewFriend",
-                            "icon": "fa-user",
-                            "color": "orange",
-                            "form": {
-                                "form": "FriendForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-user",
-                            "color": "yellow",
-                            "search": {
-                                "color": "grey",
-                                "search": true,
-                            },
-                            "url": "/friend",
-                            "page": "overviewFriend"
-                        },
-                    ]
-                },
-                {
-                    "id": "locationspage",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewLocation",
-                            "icon": "fa-regular fa-map",
-                            "color": "green",
-                            "width": 2,
-                            "form": {
-                                "form": "LocationForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-regular fa-map",
-                            "color": "emerald",
-                            "search": true,
-                            "url": "/location",
-                            "page": "overviewLocation"
-                        },
-                    ]
-                },
-                {
-                    "id": "groupspage",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewGroup",
-                            "icon": "fa-weixin",
-                            "color": "blue",
-                            "form": {
-                                "form": "GroupForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-weixin",
-                            "color": "turquoise",
-                            "search": true,
-                            "url": "/group",
-                            "form": {
-                                "form": "GroupForm"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "activitypage",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "NewActivity",
-                            "icon": "fa-regular fa-futbol",
-                            "color": "wisteria",
-                            "width": 2,
-                            "form": {
-                                "form": "ActivityForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-regular fa-futbol",
-                            "color": "pink",
-                            "search": true,
-                            "url": "/activity",
-                            "page": "overviewActivity"
-                        }
-                    ]
-                },
-                {
-                    "id": "overviewFriend",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "button",
-                            "name": "EditFriend",
-                            "icon": "fa-user",
-                            "color": "orange",
-                            "form": {
-                                "form": "FriendForm"
-                            }
-                        },
-                        {
-                            "type": "newButton",
-                            "name": "AddActivity",
-                            "icon": "fa-futbol",
-                            "color": "wisteria",
-                            "form": {
-                                "form": "AddActivityForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-weixin",
-                            "color": "pink",
-                            "search": true,
-                            "url": "/friend/:friendKey/activity",
-                        }
-                    ]
-                },
-                {
-                    "id": "overviewLocation",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "button",
-                            "name": "EditLocation",
-                            "icon": "fa-weixin",
-                            "color": "green",
-                            "form": {
-                                "form": "LocationForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-weixin",
-                            "color": "pink",
-                            "search": true,
-                            "url": "/location/:locationKey/activity",
-                        }
-                    ]
-                },
-                {
-                    "id": "overviewActivity",
-                    "elementList": [
-                        {
-                            "type": "backbutton",
-                        },
-                        {
-                            "type": "button",
-                            "name": "EditActivity",
-                            "icon": "fa-weixin",
-                            "color": "wisteria",
-                            "form": {
-                                "form": "ActivityForm"
-                            }
-                        },
-                        {
-                            "type": "list",
-                            "icon": "fa-weixin",
-                            "color": "yellow",
-                            "search": true,
-                            "url": "/activity/:activityKey/friend",
-                        }
-                    ]
-                },
-            ]
         }
     };
 
