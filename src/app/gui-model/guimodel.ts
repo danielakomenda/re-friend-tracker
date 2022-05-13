@@ -204,7 +204,7 @@ export class GuiModel {
                 },
                 {
                     "id": "AddActivityForm",
-                    "title": "AddActivity",
+                    "title": "Activity",
                     "url": "/friend/:friendKey/activity",
                     "formFieldList": [
                         {
@@ -214,8 +214,8 @@ export class GuiModel {
                             "url": "/activity",
                             "defaultKey": "activityKey",
                             "readonly": true,
-                            "width": 2,
-                            "form": "ActivityForm"
+                            "form": "ActivityForm",
+                            "width": 2
                         },
                         {
                             "type": "deleteButton",
