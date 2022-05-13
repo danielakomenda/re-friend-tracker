@@ -164,7 +164,7 @@ export class GuiModel {
                             "name": "AddActivity",
                             "icon": "fa-futbol",
                             "color": "wisteria",
-                            "width": 2,
+                            "width": 1,
                             "form": {
                                 "form": "AddActivityForm"
                             }
@@ -199,7 +199,7 @@ export class GuiModel {
                             "name": "EditLocation",
                             "icon": "fa-weixin",
                             "color": "green",
-                            "width": 2,
+                            "width": 1,
                             "form": {
                                 "form": "LocationForm"
                             }
@@ -224,7 +224,7 @@ export class GuiModel {
                             "name": "EditActivity",
                             "icon": "fa-weixin",
                             "color": "wisteria",
-                            "width": 2,
+                            "width": 1,
                             "form": {
                                 "form": "ActivityForm"
                             }
