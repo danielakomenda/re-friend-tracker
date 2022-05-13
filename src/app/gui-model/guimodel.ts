@@ -1,5 +1,3 @@
-import { getSymbolQuery } from "@angular/compiler-cli";
-
 export class GuiModel {
 
     /* HINWEIS: Texte sind in der Datei ../example-translation-service.ts definiert.
