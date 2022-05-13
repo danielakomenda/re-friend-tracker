@@ -1,3 +1,5 @@
+import { getSymbolQuery } from "@angular/compiler-cli";
+
 export class GuiModel {
 
     /* HINWEIS: Texte sind in der Datei ../example-translation-service.ts definiert.
@@ -282,7 +284,10 @@ export class GuiModel {
                             "type": "list",
                             "icon": "fa-user",
                             "color": "yellow",
-                            "search": true,
+                            "search": {
+                                "color": "grey",
+                                "search": true,
+                            },
                             "url": "/friend",
                             "page": "overviewFriend"
                         },
